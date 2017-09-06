@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Collapsible from 'react-collapsible'
 
 export default class MatchesList extends Component {
     constructor(props){
@@ -14,18 +15,18 @@ export default class MatchesList extends Component {
 
     handleClick(e){
         console.log('e =>', e);
-		
-		if(this.state.open){
-			this.setState({
-				open: false,
-				class: 'section'
-			});
-		} else {
-			this.setState({
-				open: true,
-				class: 'section open'
-			})
-		}
+        
+        if(this.state.open){
+            this.setState({
+                open: false,
+                class: 'section'
+            });
+        } else {
+            this.setState({
+                open: true,
+                class: 'section open'
+            })
+        }
     } 
 
     render(){
@@ -42,9 +43,11 @@ export default class MatchesList extends Component {
                         <img src="https://ssl.gstatic.com/onebox/media/sports/logos/mlXOOB9HXxLpoeS2dHSgGA_56x42.png" alt="India"/>
                     </span>
                     <span className="result-container">{item.result}</span>
-                    <div className={`view-more ${sectionClass}`} onClick={handleClickEvent} >
-                        <p className="synopsis-container">{item.synopsis}</p>
-                    </div>
+                    <Collapsible trigger="Start here">
+                        <div className={`view-more ${sectionClass}`} onClick={handleClickEvent} >
+                            <p className="synopsis-container">{item.synopsis}</p>
+                        </div>
+                    </Collapsible>
                 </li>
             )
         });
