@@ -9,25 +9,7 @@ export default class MatchesList extends Component {
             open: false,
             class: 'section'
         }
-
-        this.handleClick = this.handleClick.bind(this);
     }
-
-    handleClick(e){
-        console.log('e =>', e);
-        
-        if(this.state.open){
-            this.setState({
-                open: false,
-                class: 'section'
-            });
-        } else {
-            this.setState({
-                open: true,
-                class: 'section open'
-            })
-        }
-    } 
 
     render(){
         let handleClickEvent = this.handleClick;
@@ -44,7 +26,7 @@ export default class MatchesList extends Component {
                     </span>
                     <span className="result-container">{item.result}</span>
                     <Collapsible trigger="Start here">
-                        <div className={`view-more ${sectionClass}`} onClick={handleClickEvent} >
+                        <div className={`view-more ${sectionClass}`} >
                             <p className="synopsis-container">{item.synopsis}</p>
                         </div>
                     </Collapsible>
