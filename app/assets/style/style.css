@@ -1,6 +1,8 @@
 .date-container,
 .result-container {
     display: block;
+    font-size: 20px;
+    line-height: 36px;
 }
 
 * {
@@ -14,4 +16,43 @@
 
 body {
     background: black;
+}
+
+.Collapsible {
+    width: 100%;
+    overflow: hidden;
+    border-top: 1px solid #ccc;
+    margin-top: 14px;
+    display: inline-block;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+li.list-group-item {
+    margin-bottom: 5px;
+}
+
+li.list-group-item:first-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+li.list-group-item:last-child  {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.Collapsible span.result {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.Collapsible__trigger.is-open {
+    width: 100%;
+    display: inline-block;
+}
+
+.Collapsible__contentOuter {
+    text-align: center;
 }
