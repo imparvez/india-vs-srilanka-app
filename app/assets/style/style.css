@@ -48,7 +48,8 @@ li.list-group-item:last-child  {
     text-align: center;
 }
 
-.Collapsible__trigger.is-open {
+.Collapsible__trigger.is-open,
+.Collapsible__trigger.is-closed {
     width: 100%;
     display: inline-block;
 }
