@@ -5,6 +5,12 @@
     line-height: 36px;
 }
 
+.date-container,
+.result-container,
+.image-container {
+    text-align: center;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -15,7 +21,7 @@
 }
 
 body {
-    background: black;
+    padding: 1.1em 1.25em;
 }
 
 .Collapsible {
@@ -52,8 +58,23 @@ li.list-group-item:last-child  {
 .Collapsible__trigger.is-closed {
     width: 100%;
     display: inline-block;
+    text-align: left;
+    transition: all 0.5s;
 }
 
 .Collapsible__contentOuter {
     text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    
+    .Collapsible__trigger.is-open {
+        text-align: center;
+    }
+
+    .teamAScoreContainer,
+    .teamBScoreContainer {
+        display: inline-block
+    }
+
 }
